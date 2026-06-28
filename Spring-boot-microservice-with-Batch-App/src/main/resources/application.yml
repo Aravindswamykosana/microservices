@@ -1,0 +1,22 @@
+spring:
+  application:
+    name: Spring-boot-microservice-with-Batch-App
+  datasource:
+    url: jdbc:mysql://localhost:3306/ar
+    username: root
+    password: root
+    driver-class-name: com.mysql.cj.jdbc.Driver
+  jpa:
+    show-sql: true
+    hibernate:
+      ddl-auto: update
+  batch:
+    jdbc:
+      initialize-schema: always
+    job:
+      enabled: true                      # change this to true or remove if you want jobs to start automatically
+  sql:
+    init:
+      mode: always
+server:
+  port: 9090
