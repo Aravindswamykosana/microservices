@@ -1,0 +1,17 @@
+spring:
+  application:
+    name: order-service
+  config:
+    import: optional:configserver:http://localhost:8001
+  mvc:
+    pathmatch:
+      matching-strategy: ant-path-matcher
+  boot:
+    admin:
+      client:
+        url: http://localhost:8080/
+        enabled: true
+        instance:
+          service-base-url: http://localhost:9002
+server:
+  port: 9002

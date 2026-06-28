@@ -1,0 +1,27 @@
+spring:
+  application:
+    name: Spring-boot-microservice-with-circuitbreaker-provider
+  boot:
+    admin:
+      client:
+        url: "http://localhost:8080"
+  datasource:
+    url: jdbc:h2:file:C:/Users/ARAVIND/circuit;DB_CLOSE_DELAY=-1;AUTO_SERVER=TRUE
+    username: root
+    password: root
+    driver-class-name: org.h2.Driver
+
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+  h2:
+    console:
+      path: /h2-console
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
+server:
+  port: 9090

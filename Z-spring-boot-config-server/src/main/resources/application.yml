@@ -1,0 +1,13 @@
+spring:
+  application:
+    name: Z-spring-boot-config-server
+  cloud:
+    config:
+      server:
+        git:
+          uri: https://github.com/Aravindswamykosana/config-server-yamls
+          clone-on-start: true
+
+server:
+  port: 8001
+
